@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact - Shaher Ezzat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Shaher Ezzat Elsayed</h1>
+        <h2>Civil Site Engineer</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h3>Contact Me</h3>
+        <ul>
+            <li><strong>Mobile:</strong> <a href="tel:+201099442127">+20 109 944 2127</a></li>
+            <li><strong>Email:</strong> <a href="mailto:shaherezzat12345@gmail.com">shaherezzat12345@gmail.com</a></li>
+            <li><strong>Address:</strong> Shibin Al-Qanater, Qalyubia, Egypt</li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourprofile">LinkedIn Profile</a></li>
+        </ul>
+
+        
+    </section>
+
+    <script>
+        function sendEmail() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Create mailto link
+            const subject = encodeURIComponent(`New message from ${name}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage:\n${message}`);
+
+            window.location.href = `mailto:shaherezzat12345@gmail.com?subject=$`;
+
+            // Display feedback message
+            document.getElementById("feedback-message").innerText = "Your email client should open now. Please send your message from there.";
+            document.getElementById("feedback-message").style.display = "block";
+
+            return false; // Prevent form submission
+        }
+    </script>
+
+</body>
+</html>
